@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
+import './theme.css';
 import './App.css';
+import {Route, Switch} from 'react-router-dom';
+
+import HeaderComponent from './components/HeaderComponent/HeaderComponent';
+
+import HomePage from './Pages/HomePage/HomePage';
+import AboutPage from './Pages/AboutPage/AboutPage';
+import ContactPage from './Pages/ContactPage/ContactPage';
+import BlogsPage from './Pages/BlogsPage/BlogsPage';
+import PageNotFound from './Pages/404/404';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <HeaderComponent />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          {/* If I am on '/'  route, please render HomePage component for me */}
+          <Route path="/about" component={AboutPage} />
+          <Route path="/blog" component={BlogsPage} />
+          <Route path="/contact" component={ContactPage} />
+          <Route component={PageNotFound} />
+        </Switch>
       </div>
     );
   }

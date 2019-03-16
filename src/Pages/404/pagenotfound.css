@@ -1,0 +1,18 @@
+.PageNotFoundContainer {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;     
+}
+
+.PageNotFoundContainer > p {
+    font-size: 2em;
+}
+
+.PageNotFoundContainer > .MainErrorText {
+    font-size: 5em;
+    font-weight: bolder;
+}

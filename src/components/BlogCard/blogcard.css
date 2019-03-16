@@ -1,0 +1,24 @@
+.BlogCard {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 60%;
+    margin: 5px 0px;
+    padding: 10px 20px;
+}
+
+.BlogCard > p {
+    line-height: 1.5;
+    font-size: 1em;
+    width: 90%;
+    text-align: justify;
+    margin: 0px 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.BlogCard > h3 > a{
+    cursor: pointer;
+    font-size: 1.2em;
+    color: black;
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

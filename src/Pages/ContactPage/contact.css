@@ -1,0 +1,37 @@
+.ContactPageContainer {
+    background-color: #eee;
+    width: 80%;
+    margin: 5px auto;
+    padding: 20px;
+}
+
+.ContactPageContainer > div > input {
+    display: block;
+    width: 95%;
+    margin: 10px 0px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.ContactPageContainer > div > button {
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    border-width: 0px;
+    border-radius: 5px;
+}
+
+.ProjectIdea {
+    height: 100px;
+}
+
+
+.ContactPageContainer > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+

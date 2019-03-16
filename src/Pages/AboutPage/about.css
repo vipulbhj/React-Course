@@ -1,0 +1,29 @@
+.AboutPageContainer {
+    width: 100%;
+    padding: 20px;
+}
+
+.AboutPageContainer > .AboutInfo {
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.AboutPageContainer > .AboutInfo > p > span {
+    letter-spacing: 2px;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    margin-left: 20px;
+}
+
+
+.AboutInfoHire {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.AboutInfoHire > ul {
+    list-style: none;
+}
+

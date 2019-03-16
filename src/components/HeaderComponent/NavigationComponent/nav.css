@@ -1,0 +1,21 @@
+.NavigationContainer {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.NavigationContainer > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.NavigationContainer > a:hover {
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+}
