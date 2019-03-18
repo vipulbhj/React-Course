@@ -3,6 +3,7 @@ import * as actionTypes from './action';
 const initialState = {
     smh: [],
     blogList: [],
+    isOnline: false,
     formState: {
         firstName: '',
         lastName: '',
@@ -34,7 +35,8 @@ const reducer = (state = initialState, action) => {
         case actionTypes.DOWNLOAD_BLOG_LIST: 
             return {
                 ...state, 
-                blogList: action.data
+                blogList: action.data,
+                isOnline: true
             }
     }
     return state;

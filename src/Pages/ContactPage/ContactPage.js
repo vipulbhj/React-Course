@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import Button from '@material-ui/core/Button';
 
 import * as actionCreator from '../../store/action';
 
@@ -58,7 +59,7 @@ class ContactPage extends Component {
                         value={formState.budget}
                         onChange={(e) => handleFormChange(e.target.value, 'budget')}
                     />
-                    <button onClick={this.handleSaveButton}>Save</button>
+                    <Button variant="contained" color="primary" onClick={this.handleSaveButton}>Save</Button>
                 </div>
             </div>
         )

@@ -12,31 +12,37 @@ class DefaultBlogsPage extends Component {
         console.log('Place holder for asking for data');
         this.props.downloadBlogList()
     }
-    
+
     render() {
         const {match} = this.props;
         const DATA = this.props.blogList;
+
+        let returnData = (
+            DATA.map((item) => {
+                return (
+                    <BlogCard key={item.id}
+                        to={`${match.url}/${item.id}`}
+                        name={item.name}
+                        data={item.data.substring(0, 100) + " ..."}
+                    />
+                )
+            })
+        ) 
+
         return (
             <div className="BlogsPageContainer">
-            {
-                DATA.map((item) => {
-                    return (
-                        <BlogCard key={item.id}
-                            to={`${match.url}/${item.id}`}
-                            name={item.name}
-                            data={item.data.substring(0, 100) + " ..."}
-                        />
-                    )
-                })
-            }
-            </div>    
+                {
+                    this.props.isOnline ? returnData : <p>Offline</p> 
+                }     
+            </div>
         )
     }
 }
 
 const mapStateToProps = (state) => {
     return {
-        blogList: state.blogList
+        blogList: state.blogList,
+        isOnline: state.isOnline
     }
 }
 
@@ -53,7 +59,7 @@ const BlogsPage = ({match}) => {
     return (
         <Switch>
             <Route path={`${match.path}/:id`}
-                render={() => <BlogPage blog={{}} />}
+                component={BlogPage}/> }
             />
             <Route exact
                 path={match.path}

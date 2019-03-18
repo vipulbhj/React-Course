@@ -1,7 +1,9 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import './blog.css';
 
-const BlogPage = ({blog}) => {
+const BlogPage = ({blogs, match}) => {
+    const blog = blogs[match.params.id - 1];
     return (
         <div className="BlogPageContainer">
             <h3>{blog.name}</h3>
@@ -13,4 +15,10 @@ const BlogPage = ({blog}) => {
     )
 }
 
-export default BlogPage;
+const mapStateToProps = (state) => {
+    return {
+       blogs: state.blogList 
+    }
+}
+
+export default connect(mapStateToProps)(BlogPage);

@@ -1,11 +1,13 @@
 import React from 'react';
 import './item.css';
 
+import Icon from '@material-ui/core/Icon';
+
 const SocialMediaItemComponent = (props) => {
     return (
         <div className="SocialMediaItem">
             <a href={props.link} title={props.link}>
-                {props.name}
+                <Icon>{props.name}</Icon>
             </a>
         </div>
     );

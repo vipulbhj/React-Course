@@ -14,14 +14,14 @@
     border-radius: 5px;
 }
 
-.ContactPageContainer > div > button {
+/* .ContactPageContainer > div > button {
     padding: 10px;
     font-size: 1.2em;
     background-color: var(--secondary-color);
     border-color: var(--secondary-color);
     border-width: 0px;
     border-radius: 5px;
-}
+} */
 
 .ProjectIdea {
     height: 100px;
